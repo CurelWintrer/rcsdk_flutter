@@ -77,21 +77,10 @@ android {
         }
     }
 
-    signingConfigs {
-
+    defaultConfig {
+        consumerProguardFiles("consumer-rules.pro")
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = true
-            isShrinkResources = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-//            signingConfig = signingConfigs.getByName("release")
-        }
-    }
 }
 
 kotlin {
@@ -106,6 +95,7 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.mockito:mockito-core:5.0.0")
     implementation("com.skydroid:rcsdk:1.9.2")
+    implementation("commons-net:commons-net:3.12.0")
 }
 
 

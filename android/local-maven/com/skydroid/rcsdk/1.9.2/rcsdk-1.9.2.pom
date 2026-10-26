@@ -11,4 +11,14 @@
     <version>1.9.2</version>
     <packaging>aar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.skydroid</groupId>
+            <artifactId>h16_airlink</artifactId>
+            <version>1.9.2</version>
+            <scope>compile</scope>
+            <type>aar</type>
+        </dependency>
+    </dependencies>
+
 </project>
