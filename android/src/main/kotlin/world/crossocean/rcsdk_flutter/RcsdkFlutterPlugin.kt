@@ -128,7 +128,7 @@ class RcsdkFlutterPlugin : FlutterPlugin, MethodCallHandler {
                             if (!lastKeyChannels.contentEquals(it)) {
                                 onKeyChannels(it)
                                 lastKeyChannels = it.copyOf()
-                                Log.d(LOGTAG,it.contentToString())
+//                                Log.d(LOGTAG,it.contentToString())
                             }
 
                         }
