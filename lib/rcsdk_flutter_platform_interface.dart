@@ -33,6 +33,11 @@ abstract class RcsdkFlutterPlatform extends PlatformInterface {
     throw UnimplementedError('initSDK() has not been implemented.');
   }
 
+  /// 遥控器型号
+  Future<String?> modelNumber() {
+    throw UnimplementedError('modelNumber() has not been implemented.');
+  }
+
   Future<void> connectToRC() {
     throw UnimplementedError('connectToRC() has not been implemented.');
   }

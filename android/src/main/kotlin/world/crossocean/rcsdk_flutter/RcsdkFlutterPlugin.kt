@@ -70,6 +70,23 @@ class RcsdkFlutterPlugin : FlutterPlugin, MethodCallHandler {
                 }
 
             }
+            "modelNumber" -> {
+                try {
+                    KeyManager.get(RemoteControllerKey.KeyModel,object : CompletionCallbackWith<String> {
+                        override fun onSuccess(keyResult: String?) {
+                            Log.d(LOGTAG,"result: $keyResult")
+                            result.success(keyResult)
+                        }
+
+                        override fun onFailure(p0: SkyException?) {
+                            Log.d(LOGTAG,"获取遥控器型号失败")
+                            result.error("","获取遥控器型号失败","")
+                        }
+                    })
+                } catch (e: Exception) {
+                    result.error(LOGTAG,"modelNumber() failed",e)
+                }
+            }
             "disconnectRC" -> {
                 try {
                     RCSDKManager.disconnectRC()

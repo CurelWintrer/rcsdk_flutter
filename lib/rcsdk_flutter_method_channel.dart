@@ -21,6 +21,11 @@ class MethodChannelRcsdkFlutter extends RcsdkFlutterPlatform {
   }
 
   @override
+  Future<String?> modelNumber() async{
+    return await methodChannel.invokeMethod<String>("modelNumber");
+  }
+
+  @override
   Future<void> connectToRC() async{
     await methodChannel.invokeMethod("connectToRC");
   }

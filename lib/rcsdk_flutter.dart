@@ -8,6 +8,10 @@ class RcsdkFlutter {
     await RcsdkFlutterPlatform.instance.initSDK();
   }
 
+  Future<String?> modelNumber() async{
+    return await RcsdkFlutterPlatform.instance.modelNumber();
+  }
+
   Future<void> connectToRC() async{
     await RcsdkFlutterPlatform.instance.connectToRC();
   }
