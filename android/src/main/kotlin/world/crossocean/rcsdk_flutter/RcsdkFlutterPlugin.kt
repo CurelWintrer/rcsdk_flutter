@@ -79,8 +79,8 @@ class RcsdkFlutterPlugin : FlutterPlugin, MethodCallHandler {
                         }
 
                         override fun onFailure(p0: SkyException?) {
-                            Log.d(LOGTAG,"获取遥控器型号失败")
-                            result.error("","获取遥控器型号失败","")
+                            Log.d(LOGTAG,"获取遥控器型号失败$p0")
+                            result.error("","获取遥控器型号失败",p0)
                         }
                     })
                 } catch (e: Exception) {
